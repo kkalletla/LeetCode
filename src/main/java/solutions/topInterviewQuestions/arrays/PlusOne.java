@@ -5,13 +5,6 @@ import java.util.List;
 
 public class PlusOne {
 
-    public static void main(String[] args) {
-
-        for (int i: new PlusOne().plusOne(new int[] {9})) {
-            System.out.println(i);
-        }
-    }
-
     public int[] plusOne(int[] digits) {
 
         if (digits == null || digits.length == 0)
