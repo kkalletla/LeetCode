@@ -7,25 +7,6 @@ public class ValidSudoku {
 
     Map<Character, Integer> characterMap = new HashMap<Character, Integer>();
 
-
-    public static void main(String[] args) {
-
-        char[][] board = new char[][] {
-                {'8','3','.','.','7','.','.','.','.'},
-                {'6','.','.','1','9','5','.','.','.'},
-                {'.','9','8','.','.','.','.','6','.'},
-                {'8','.','.','.','6','.','.','.','3'},
-                {'4','.','.','8','.','3','.','.','1'},
-                {'7','.','.','.','2','.','.','.','6'},
-                {'.','6','.','.','.','.','2','8','.'},
-                {'.','.','.','4','1','9','.','.','5'},
-                {'.','.','.','.','8','.','.','7','9'}
-        };
-
-        System.out.println(new ValidSudoku().isValidSudoku(board));
-
-    }
-
     public boolean isValidSudoku(char[][] board) {
 
         characterMap.put('.', 0);
@@ -77,12 +58,6 @@ public class ValidSudoku {
             }
         }
         return true;
-    }
-
-    private void printArray(int[] counters) {
-        for (int i: counters)
-            System.out.print(i);
-        System.out.println();
     }
 
 }
