@@ -2,11 +2,6 @@ package solutions;
 
 public class _4_MedianOfTwoSortedArrays {
 
-    public static void main(String[] args) {
-
-        System.out.println(new _4_MedianOfTwoSortedArrays().findMedianSortedArrays(new int[] {}, new int[] {2, 3, 7, 10, 12, 15}));
-    }
-
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
         if (nums2 == null || nums2.length == 0) {
