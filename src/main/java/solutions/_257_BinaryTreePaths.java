@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _257_BinaryTreePaths {
-    
+
     List<String> paths = new ArrayList<>();
     public List<String> binaryTreePaths(TreeNode root) {
         binaryTreePaths(new String(), root);
