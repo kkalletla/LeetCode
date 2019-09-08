@@ -3,78 +3,48 @@ package solutions;
 import java.util.*;
 
 public class _635_DesignLogStorageSystem {
-
-    public static void main(String[] args) {
-
-        _635_DesignLogStorageSystem object = new _635_DesignLogStorageSystem();
-
-
-        object.put(1, "2017:01:01:23:59:59");
-        object.put(2, "2017:01:01:22:59:59");
-        object.put(3, "2016:01:01:00:00:00");
-        object.put(4, "2016:01:01:00:00:00");
-
-        // System.out.println(object.logs);
-
-        System.out.println(object.retrieve("2016:01:01:01:01:01","2017:01:01:23:00:00","Month"));
-        System.out.println(object.retrieve("2016:01:01:01:01:01","2017:01:01:23:00:00","Hour"));
-    }
-
-    Map<String, Set<Integer>> logs = null;
-    String[] granularities = null;
-    String[] startTimeReplace = null;
-    String[] endTimeReplace = null;
-    int[] indexesOdCollen = null;
+    
+    List<Integer> ids = null;
+    List<String> timeStamps = null;
 
     public _635_DesignLogStorageSystem() {
-        logs = new TreeMap<>();
-        granularities = new String[] {"Year", "Month", "Day", "Hour", "Minute"};
-
-        startTimeReplace = new String[] {":00:00:00:00:00",
-                ":00:00:00:00",
-                ":00:00:00",
-                ":00:00",
-                ":00"};
-
-        endTimeReplace = new String[] {":12:31:23:59:59",
-                ":31:23:59:59",
-                ":23:59:59",
-                ":59:59",
-                ":59"};
-
-        indexesOdCollen = new int[] {4, 7, 10, 13, 16};
-
+        ids = new ArrayList<>();
+        timeStamps = new ArrayList<>();
     }
 
     public void put(int id, String timestamp) {
-        Set<Integer> ids = logs.getOrDefault(timestamp, new HashSet<>());
         ids.add(id);
-        logs.put(timestamp, ids);
+        timeStamps.add(timestamp);
     }
 
     public List<Integer> retrieve(String s, String e, String gra) {
-        Set<Integer> returnLogs = new HashSet<>();
+        List<Integer> returnLogs = new ArrayList<>();
 
-        for (int granularity = 0; granularity < granularities.length; granularity ++) {
-            if (granularities[granularity].equals(gra)) {
-                s = s.substring(0, indexesOdCollen[granularity]) +  startTimeReplace[granularity];
-                // System.out.println(s);
+        s = s.substring(0, getCollenIndex(gra));
+        e = e.substring(0, getCollenIndex(gra));
 
-                e = e.substring(0, indexesOdCollen[granularity]) +  endTimeReplace[granularity];
-                // System.out.println(e);
-            }
-        }
+        for (int i = 0; i < ids.size(); i++) {
 
-        for (Map.Entry<String, Set<Integer>> entry: logs.entrySet()) {
-
-            // System.out.println("*********************");
-            // System.out.println(entry.getKey() + s.compareTo(entry.getKey()) + " " + e.compareTo(entry.getKey()));
-            if (s.compareTo(entry.getKey())  <= 0
-                && e.compareTo(entry.getKey()) >= 0) {
-                returnLogs.addAll(entry.getValue());
+            int index = getCollenIndex(gra);
+            String compare = timeStamps.get(i).substring(0, index);
+            if (s.compareTo(compare)  <= 0
+                && e.compareTo(compare) >= 0) {
+                returnLogs.add(ids.get(i));
             }
         }
 
         return new ArrayList<>(returnLogs);
+    }
+
+    public int getCollenIndex(String granularity) {
+        switch (granularity) {
+            case "Year" : return 4;
+            case "Month" : return 7;
+            case "Day" : return 10;
+            case "Hour" : return 13;
+            case "Minute" : return 16;
+            case "Second" : return 19;
+            default: return 0;
+        }
     }
 }
