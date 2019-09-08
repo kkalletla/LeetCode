@@ -6,15 +6,6 @@ import java.util.*;
 
 public class _884_UncommonWordsFromTwoSentences {
 
-    public static void main(String[] args) {
-
-        String[] uncommonStrings = new _884_UncommonWordsFromTwoSentences().uncommonFromSentences("this apple is sweet",
-                "this apple is sour");
-
-        Print.printArray(uncommonStrings);
-
-    }
-
     public String[] uncommonFromSentences(String A, String B) {
 
         Map<String, Integer> map = new HashMap<>();
