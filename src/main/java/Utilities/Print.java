@@ -7,4 +7,10 @@ public class Print {
             System.out.print(i + "\t");
         }
     }
+
+    public static void printArray(String[] array) {
+        for (String i: array) {
+            System.out.print(i + "\t");
+        }
+    }
 }
