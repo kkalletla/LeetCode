@@ -4,7 +4,6 @@
     <list default="true" id="b24468c6-b00f-4561-b199-aed4f196726f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/Print.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/Print.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/solutions/_884_UncommonWordsFromTwoSentences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/solutions/_884_UncommonWordsFromTwoSentences.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,9 +59,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application._884_UncommonWordsFromTwoSentences">
+  <component name="RunManager" selected="Application._244_ShortestWordDistanceII">
     <configuration name="_113_PathSumII" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="solutions._113_PathSumII" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="solutions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_244_ShortestWordDistanceII" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="solutions._244_ShortestWordDistanceII" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -87,21 +99,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_29_DivideTwoIntegers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="solutions._29_DivideTwoIntegers" />
-      <module name="LeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="solutions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_370_RangeAddition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="solutions._370_RangeAddition" />
+    <configuration name="_635_DesignLogStorageSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="solutions._635_DesignLogStorageSystem" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -127,19 +126,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application._29_DivideTwoIntegers" />
-      <item itemvalue="Application._370_RangeAddition" />
       <item itemvalue="Application._257_BinaryTreePaths" />
       <item itemvalue="Application._113_PathSumII" />
       <item itemvalue="Application._884_UncommonWordsFromTwoSentences" />
+      <item itemvalue="Application._635_DesignLogStorageSystem" />
+      <item itemvalue="Application._244_ShortestWordDistanceII" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._244_ShortestWordDistanceII" />
+        <item itemvalue="Application._635_DesignLogStorageSystem" />
         <item itemvalue="Application._884_UncommonWordsFromTwoSentences" />
         <item itemvalue="Application._113_PathSumII" />
         <item itemvalue="Application._257_BinaryTreePaths" />
-        <item itemvalue="Application._370_RangeAddition" />
-        <item itemvalue="Application._29_DivideTwoIntegers" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +165,7 @@
       <workItem from="1566679021702" duration="41000" />
       <workItem from="1566679117958" duration="1661000" />
       <workItem from="1567030437740" duration="1491000" />
-      <workItem from="1567114471707" duration="10071000" />
+      <workItem from="1567114471707" duration="17353000" />
     </task>
     <servers />
   </component>
@@ -283,6 +282,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/solutions/_113_PathSumII.java</url>
           <line>23</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/solutions/_635_DesignLogStorageSystem.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/solutions/_244_ShortestWordDistanceII.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/solutions/_244_ShortestWordDistanceII.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
